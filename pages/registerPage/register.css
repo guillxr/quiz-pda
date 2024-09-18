@@ -21,6 +21,10 @@
     margin: 2rem 0;
 }
 
+#username-field label {
+    font-size: 1.1rem;
+}
+
 #username-field.error input {
     border-color: red;
 }
@@ -34,11 +38,13 @@
     outline: none;
     border: 2px solid #cccccc;
     border-radius: .5rem;
+    font-size: 1.1rem;
 }
 
 #avatar-selection span {
     display: block;
     margin-bottom: .5rem;
+    font-size: 1.1rem;
 }
 
 .avatars {
