@@ -1,0 +1,85 @@
+#register-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#register-card {
+    min-width: 305px;
+}
+
+#register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#username-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+#username-field.error input {
+    border-color: red;
+}
+
+#username-field.error span {
+    color: red;
+}
+
+#username-input {
+    padding: .3rem;
+    outline: none;
+    border: 2px solid #cccccc;
+    border-radius: .5rem;
+}
+
+#avatar-selection span {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.avatars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
+
+.avatar-input {
+    border: .25rem solid transparent;
+    width: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar-selected {
+    border: .25rem solid #571530;
+}
+
+#register-form .button {
+    margin: 2rem auto;
+}
+
+@media screen and (min-width: 768px) {
+    #register-card {
+        margin: 0 calc(50vw / 2);
+        padding: 1rem;
+        border-radius: .5rem;
+        border: .2rem solid #571530;
+        box-shadow: 0.2rem 0.2rem 0 #571530;
+    }
+
+    .avatars {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1156px) {
+    #register-card {
+        max-width: 577px;
+    }
+}
