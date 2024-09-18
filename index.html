@@ -3,11 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz PDA</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="pages/registerPage/register.css">
 </head>
 <body>
-    
+    <div id="register" class="hidden">
+        <div id="register-section">
+            <div id="register-card">
+                <h1 class="register-title">Seja bem-vindo!</h1>
+                <form id="register-form">
+                    <div id="username-field">
+                        <label>Nome de úsuario *</label>
+                        <input type="text" id="username-input" placeholder="Digite seu nome de úsuario">
+                    </div>
+                    <div id="avatar-selection">
+                        <span>Avatar</span>
+                        <ul class="avatars">
+                            <li>
+                                <img src="images/avatars/avatar-0.svg" id="avatar-0" class="avatar-input">
+                            </li>
+                            <li>
+                                <img src="images/avatars/avatar-1.svg" id="avatar-1" class="avatar-input">
+                            </li>
+                            <li>
+                                <img src="images/avatars/avatar-2.svg" id="avatar-2" class="avatar-input">
+                            </li>
+                            <li>
+                                <img src="images/avatars/avatar-3.svg" id="avatar-3" class="avatar-input">
+                            </li>
+                            <li>
+                                <img src="images/avatars/avatar-4.svg" id="avatar-4" class="avatar-input">
+                            </li>
+                            <li>
+                                <img src="images/avatars/avatar-5.svg" id="avatar-5" class="avatar-input">
+                            </li>
+                            <li>
+                                <img src="images/avatars/avatar-6.svg" id="avatar-6" class="avatar-input">
+                            </li>
+                            <li>
+                                <img src="images/avatars/avatar-7.svg" id="avatar-7" class="avatar-input">
+                            </li>
+                            <li>
+                                <img src="images/avatars/avatar-8.svg" id="avatar-8" class="avatar-input">
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <button type="submit" id="register-confirm-button" class="button">Confirmar</button>
+                </form>
+            </div>     
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
+    <script src="js/user.js"></script>
+    <script src="pages/registerPage/register.js" defer></script>
 </body>
 </html>
