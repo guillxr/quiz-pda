@@ -79,6 +79,6 @@ function updateXpProgressBar() {
     const value = parseInt(progressContainer.getAttribute('value'))
     const max = parseInt(progressContainer.getAttribute('max'))
 
-    const percentage = (value / max) * 100
-    progressBar.style.width = `${percentage > max ? percentage : 100}%`
+    const percentage = value > max ? 100 : (value / max) * 100
+    progressBar.style.width = `${percentage}%`
 }
