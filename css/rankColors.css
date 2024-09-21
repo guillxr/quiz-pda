@@ -1,0 +1,22 @@
+[data-rank="bronze"] {
+    --rank: #B67C47;
+}
+
+[data-rank="silver"] {
+    --rank: #BDC2C9;
+}
+
+[data-rank="gold"] {
+    --rank: #F9B237;
+    margin-top: 2rem;
+}
+
+[data-rank="platinum"] {
+    --rank: #70D1F4;
+    margin-top: 2rem;
+}
+
+[data-rank="diamond"] {
+    --rank: #A55CE6;
+    margin-top: 2rem;
+}
