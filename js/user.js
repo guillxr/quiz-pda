@@ -15,5 +15,5 @@ function getUserData() {
         user.rank = userData.rank
         user.xp = userData.xp
     }
+    loadAllUserContent()
 }
-
