@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --background: #FFF9E4;
+    --btn-primary-bg: #F03986;
+    --btn-primary-shd: #571530;
+    --btn-text: #000000BD
+}
+
 * {
     font-family: 'Poppins', sans-serif;;
     box-sizing: border-box;
@@ -7,7 +15,7 @@
 }
 
 body {
-    background-color: #FFF9E4;
+    background-color: var(--background);
 }
 
 button {
@@ -23,15 +31,15 @@ li {
     font-weight: 600;
     padding: 0.9rem 2.4rem;
     border-radius: 0.4rem;
-    background-color: #F03986;
-    color: #3D0F22;
-    border: 0.2rem solid #571530;
-    box-shadow: 0.2rem 0.2rem 0 #571530;
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-text);
+    border: 0.2rem solid var(--btn-primary-shd);
+    box-shadow: 0.2rem 0.2rem 0 var(--btn-primary-shd);
     transition: all 0.1s ease;
 }
 
 .button:active {
-    background-color: #BD2D69;
+    background-color: var(--btn-primary-bg);
     box-shadow: none;
     transform: translateX(0.2rem) translateY(0.2rem);
 }
@@ -39,4 +47,26 @@ li {
 .hidden {
     display: none;
     visibility: hidden;
+}
+
+.user-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18.75rem;
+    height: 18.75rem;
+    position: relative;
+}
+
+.user-avatar-rank {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.user-avatar-content {
+    position: absolute;
+    width: 70%;
+    height: auto;
 }
