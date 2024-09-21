@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz PDA</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/rankColors.css">
     <link rel="stylesheet" href="pages/registerPage/register.css">
+    <link rel="stylesheet" href="pages/homePage/home.css">
 </head>
 <body>
-    <div id="register" class="hidden">
+    <div id="register">
         <div id="register-section">
             <div id="register-card">
                 <h1 class="register-title">Seja bem-vindo!</h1>
@@ -56,8 +58,44 @@
         </div>
     </div>
 
+    <div id="home" class="hidden">
+        <div id="home-section">
+            <div class="user-avatar">
+                <img src="" alt="" class="user-avatar-content">
+                <img src="" alt="" class="user-avatar-rank">
+            </div>
+
+            <span class="user-rank-content"></span>
+
+            <div class="progress">
+                <span class="user-info-xp">
+                    XP
+                    <span class="user-xp-current"></span>
+                    /
+                    <span class="user-next-rank-xp"></span>
+                </span>
+                <div class="xp-progress-container" value="50" max="100">
+                    <div class="xp-progress-bar"></div>
+                </div>
+            </div>
+
+            <p id="home-message">
+                Olá, <span class="user-username-content"></span>! Que bom lhe ver novamente. Vamos continuar?
+            </p>
+
+            <button type="button" id="home-button" class="button">
+                <span id="home-button-text"></span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
-    <script src="js/user.js"></script>
     <script src="pages/registerPage/register.js" defer></script>
+    <script src="pages/homePage/home.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/ranking.js"></script>
 </body>
 </html>
