@@ -13,7 +13,7 @@ avatarOptions.forEach(avatar => {
         const id = avatar.getAttribute('id')
         avatarOptions.forEach(c => c.classList.remove('avatar-selected'))
         avatar.classList.add('avatar-selected')
-        avatarInputValue = `images/avatars/avatar-${id}.svg`
+        avatarInputValue = `images/avatars/${id}.svg`
     })
 })
 
@@ -21,14 +21,20 @@ avatarOptions.forEach(avatar => {
 registerForm.addEventListener('submit', (event) => {
     event.preventDefault()
     checkInputUsername()
+    getUserData()
+    insertFirstAcessElements()
+    show(homeSection)
+    registerSection.remove()
 })
 
-// checa se o usuario esta salvo no localstorage, caso não, mostra a page de registro
+// checa se o usuario esta salvo no localstorage e chama as funções necessarias
 function checkDataStorage() {
-    if (!localStorage.getItem("user")) {
-        show(registerSection)
-    } else {
+    if (localStorage.getItem("user")) {
+        registerSection.remove()
+        show(homeSection)
         getUserData()
+        getRankAndUpdate()
+        insertButtonHomeText('Continuar')
     }
 }
 
@@ -76,7 +82,7 @@ function saveData() {
     let userTemp = {
         username: usernameInputValue,
         avatar: avatarInputValue,
-        rank: 'Bronze',
+        rank: 'bronze',
         xp: 0
     }
 
