@@ -1,0 +1,63 @@
+#home-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .user-rank-content {
+    font-style: italic;
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--btn-text);
+    text-transform: capitalize;
+    background-color: var(--rank);
+    padding: .25rem .5rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.user-info-xp {
+    font-weight: 700;
+    margin-left: .2rem;
+}
+
+.xp-progress-container {
+    width: 18.75rem;
+    background-color: #f3f3f3;
+    border-radius: 1rem;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    padding: 2px;
+}
+
+.xp-progress-bar {
+    height: 1rem;
+    background-color: #4caf50;
+    border-radius: 1rem;
+}
+
+#home-message {
+    font-size: 1.3rem;
+    margin: 1.5rem;
+    text-align: center;
+}
+
+#home-message .user-username-content {
+    font-weight: 400;
+}
+
+#home .button {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+#home .button svg {
+    fill: var(--btn-text);
+}
+
+
+
+
