@@ -1,732 +1,777 @@
 const quizData = [
     {
-        level: 1, // Nível 1 (Fácil)
+        level: 1, // Nível 1 (Bronze)
         questions: [
-            [
-                {
-                    question: "O que significa HTML?",
-                    answers: [
-                        { text: "Hyper Text Markup Language", isCorrect: true },
-                        { text: "Home Tool Markup Language", isCorrect: false },
-                        { text: "Hyperlinks and Text Markup Language", isCorrect: false },
-                        { text: "Hyper Text Module Language", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a tag HTML para inserir um link?",
-                    answers: [
-                        { text: "<a>", isCorrect: true },
-                        { text: "<link>", isCorrect: false },
-                        { text: "<href>", isCorrect: false },
-                        { text: "<url>", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você define a cor de fundo em CSS?",
-                    answers: [
-                        { text: "background-color", isCorrect: true },
-                        { text: "color", isCorrect: false },
-                        { text: "bgcolor", isCorrect: false },
-                        { text: "back-color", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a tag HTML correta para criar uma tabela?",
-                    answers: [
-                        { text: "<table>", isCorrect: true },
-                        { text: "<tbl>", isCorrect: false },
-                        { text: "<tab>", isCorrect: false },
-                        { text: "<td>", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Em JavaScript, qual comando exibe uma mensagem de alerta?",
-                    answers: [
-                        { text: "alert()", isCorrect: true },
-                        { text: "console.log()", isCorrect: false },
-                        { text: "prompt()", isCorrect: false },
-                        { text: "confirm()", isCorrect: false }
-                    ]
-                }
-            ],
-            [
-                {
-                    question: "Qual tag HTML é usada para criar um botão?",
-                    answers: [
-                        { text: "<button>", isCorrect: true },
-                        { text: "<input>", isCorrect: false },
-                        { text: "<btn>", isCorrect: false },
-                        { text: "<form>", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual propriedade CSS é usada para mudar a cor do texto?",
-                    answers: [
-                        { text: "color", isCorrect: true },
-                        { text: "text-color", isCorrect: false },
-                        { text: "font-color", isCorrect: false },
-                        { text: "background-color", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você cria um comentário em HTML?",
-                    answers: [
-                        { text: "<!-- comentário -->", isCorrect: true },
-                        { text: "// comentário", isCorrect: false },
-                        { text: "/* comentário */", isCorrect: false },
-                        { text: "** comentário **", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a tag HTML correta para um parágrafo?",
-                    answers: [
-                        { text: "<p>", isCorrect: true },
-                        { text: "<para>", isCorrect: false },
-                        { text: "<pg>", isCorrect: false },
-                        { text: "<pr>", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você inclui um arquivo CSS externo em um documento HTML?",
-                    answers: [
-                        { text: "<link rel='stylesheet' href='style.css'>", isCorrect: true },
-                        { text: "<stylesheet>style.css</stylesheet>", isCorrect: false },
-                        { text: "<css src='style.css'>", isCorrect: false },
-                        { text: "<style rel='style.css'>", isCorrect: false }
-                    ]
-                }
-            ],
-            [
-                {
-                    question: "Qual é o atributo HTML para definir uma imagem?",
-                    answers: [
-                        { text: "src", isCorrect: true },
-                        { text: "alt", isCorrect: false },
-                        { text: "href", isCorrect: false },
-                        { text: "link", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a tag HTML correta para criar uma lista não ordenada?",
-                    answers: [
-                        { text: "<ul>", isCorrect: true },
-                        { text: "<ol>", isCorrect: false },
-                        { text: "<li>", isCorrect: false },
-                        { text: "<list>", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a unidade de medida padrão usada em CSS para tamanhos relativos de fonte?",
-                    answers: [
-                        { text: "rem", isCorrect: true },
-                        { text: "px", isCorrect: false },
-                        { text: "pt", isCorrect: false },
-                        { text: "em", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual atributo HTML é usado para definir o texto alternativo de uma imagem?",
-                    answers: [
-                        { text: "alt", isCorrect: true },
-                        { text: "src", isCorrect: false },
-                        { text: "title", isCorrect: false },
-                        { text: "href", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a extensão de arquivos para salvar um documento HTML?",
-                    answers: [
-                        { text: ".html", isCorrect: true },
-                        { text: ".css", isCorrect: false },
-                        { text: ".js", isCorrect: false },
-                        { text: ".doc", isCorrect: false }
-                    ]
-                }
-            ]
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "O que significa HTML?",
+                        answers: [
+                            { text: "Hyper Text Markup Language", isCorrect: true },
+                            { text: "Home Tool Markup Language", isCorrect: false },
+                            { text: "Hyperlinks and Text Markup Language", isCorrect: false },
+                            { text: "Hyper Text Module Language", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a tag HTML correta para criar um link?",
+                        answers: [
+                            { text: "<a>", isCorrect: true },
+                            { text: "<link>", isCorrect: false },
+                            { text: "<href>", isCorrect: false },
+                            { text: "<url>", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é o atributo HTML para definir uma imagem?",
+                        answers: [
+                            { text: "src", isCorrect: true },
+                            { text: "alt", isCorrect: false },
+                            { text: "href", isCorrect: false },
+                            { text: "link", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você cria um comentário em HTML?",
+                        answers: [
+                            { text: "<!-- comentário -->", isCorrect: true },
+                            { text: "// comentário", isCorrect: false },
+                            { text: "/* comentário */", isCorrect: false },
+                            { text: "** comentário **", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a tag HTML correta para um parágrafo?",
+                        answers: [
+                            { text: "<p>", isCorrect: true },
+                            { text: "<para>", isCorrect: false },
+                            { text: "<pg>", isCorrect: false },
+                            { text: "<pr>", isCorrect: false }
+                        ]
+                    }
+                ]
+            },
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Como você define a cor de fundo em CSS?",
+                        answers: [
+                            { text: "background-color", isCorrect: true },
+                            { text: "color", isCorrect: false },
+                            { text: "bgcolor", isCorrect: false },
+                            { text: "back-color", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual propriedade CSS é usada para mudar a cor do texto?",
+                        answers: [
+                            { text: "color", isCorrect: true },
+                            { text: "text-color", isCorrect: false },
+                            { text: "font-color", isCorrect: false },
+                            { text: "background-color", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você inclui um arquivo CSS externo em um documento HTML?",
+                        answers: [
+                            { text: "<link rel='stylesheet' href='style.css'>", isCorrect: true },
+                            { text: "<stylesheet>style.css</stylesheet>", isCorrect: false },
+                            { text: "<css src='style.css'>", isCorrect: false },
+                            { text: "<style rel='style.css'>", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a unidade de medida padrão usada em CSS para tamanhos relativos de fonte?",
+                        answers: [
+                            { text: "rem", isCorrect: true },
+                            { text: "px", isCorrect: false },
+                            { text: "pt", isCorrect: false },
+                            { text: "em", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual propriedade CSS é usada para alterar o espaçamento entre as linhas de um texto?",
+                        answers: [
+                            { text: "line-height", isCorrect: true },
+                            { text: "text-spacing", isCorrect: false },
+                            { text: "letter-spacing", isCorrect: false },
+                            { text: "font-size", isCorrect: false }
+                        ]
+                    }
+                ]
+            },
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Em JavaScript, qual comando exibe uma mensagem de alerta?",
+                        answers: [
+                            { text: "alert()", isCorrect: true },
+                            { text: "console.log()", isCorrect: false },
+                            { text: "prompt()", isCorrect: false },
+                            { text: "confirm()", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você cria uma função em JavaScript?",
+                        answers: [
+                            { text: "function minhaFuncao() {}", isCorrect: true },
+                            { text: "minhaFuncao function() {}", isCorrect: false },
+                            { text: "func minhaFuncao() {}", isCorrect: false },
+                            { text: "function = minhaFuncao() {}", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você define uma variável em JavaScript?",
+                        answers: [
+                            { text: "let", isCorrect: true },
+                            { text: "variable", isCorrect: false },
+                            { text: "var", isCorrect: false },
+                            { text: "define", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual método é usado para converter uma string em número em JavaScript?",
+                        answers: [
+                            { text: "parseInt()", isCorrect: true },
+                            { text: "toNumber()", isCorrect: false },
+                            { text: "NumberFormat()", isCorrect: false },
+                            { text: "convertToNumber()", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual símbolo é usado para comentários de uma linha em JavaScript?",
+                        answers: [
+                            { text: "//", isCorrect: true },
+                            { text: "/*", isCorrect: false },
+                            { text: "#", isCorrect: false },
+                            { text: "--", isCorrect: false }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {   
+        level: 2, // Nível 2 (Silver)
+        questions: [
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Qual é a tag HTML usada para inserir uma imagem?",
+                        answers: [
+                            { text: "<img>", isCorrect: true },
+                            { text: "<image>", isCorrect: false },
+                            { text: "<src>", isCorrect: false },
+                            { text: "<picture>", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como se chama o documento padrão HTML?",
+                        answers: [
+                            { text: "index.html", isCorrect: true },
+                            { text: "home.html", isCorrect: false },
+                            { text: "main.html", isCorrect: false },
+                            { text: "default.html", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você define um botão de envio em HTML?",
+                        answers: [
+                            { text: "<button type='submit'>", isCorrect: true },
+                            { text: "<submit type='button'>", isCorrect: false },
+                            { text: "<button type='button'>", isCorrect: false },
+                            { text: "<submit></submit>", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual atributo HTML é usado para definir o texto alternativo de uma imagem?",
+                        answers: [
+                            { text: "alt", isCorrect: true },
+                            { text: "src", isCorrect: false },
+                            { text: "title", isCorrect: false },
+                            { text: "href", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a tag HTML correta para criar uma tabela?",
+                        answers: [
+                            { text: "<table>", isCorrect: true },
+                            { text: "<tbl>", isCorrect: false },
+                            { text: "<tab>", isCorrect: false },
+                            { text: "<td>", isCorrect: false }
+                        ]
+                    }
+                ]
+            },
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Como você centraliza um texto em CSS?",
+                        answers: [
+                            { text: "text-align: center;", isCorrect: true },
+                            { text: "align-text: center;", isCorrect: false },
+                            { text: "text-center: align;", isCorrect: false },
+                            { text: "center: text-align;", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você define uma borda arredondada em CSS?",
+                        answers: [
+                            { text: "border-radius", isCorrect: true },
+                            { text: "round-border", isCorrect: false },
+                            { text: "border-curve", isCorrect: false },
+                            { text: "border-rounded", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você define uma margem em CSS?",
+                        answers: [
+                            { text: "margin", isCorrect: true },
+                            { text: "padding", isCorrect: false },
+                            { text: "spacing", isCorrect: false },
+                            { text: "gap", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é o valor padrão da propriedade CSS 'display' para blocos?",
+                        answers: [
+                            { text: "block", isCorrect: true },
+                            { text: "inline", isCorrect: false },
+                            { text: "flex", isCorrect: false },
+                            { text: "grid", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual unidade CSS é relativa ao tamanho da fonte do elemento pai?",
+                        answers: [
+                            { text: "em", isCorrect: true },
+                            { text: "px", isCorrect: false },
+                            { text: "rem", isCorrect: false },
+                            { text: "%", isCorrect: false }
+                        ]
+                    }
+                ]
+            },
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Como você declara uma variável usando o escopo de bloco em JavaScript?",
+                        answers: [
+                            { text: "let", isCorrect: true },
+                            { text: "var", isCorrect: false },
+                            { text: "const", isCorrect: false },
+                            { text: "variable", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual método é usado para remover o último elemento de um array?",
+                        answers: [
+                            { text: "pop()", isCorrect: true },
+                            { text: "shift()", isCorrect: false },
+                            { text: "remove()", isCorrect: false },
+                            { text: "delete()", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a maneira correta de definir uma função anônima?",
+                        answers: [
+                            { text: "const minhaFuncao = function() {}", isCorrect: true },
+                            { text: "function minhaFuncao = () {}", isCorrect: false },
+                            { text: "minhaFuncao() = function {}", isCorrect: false },
+                            { text: "function = minhaFuncao() {}", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você acessa o valor de uma propriedade de um objeto em JavaScript?",
+                        answers: [
+                            { text: "objeto.propriedade", isCorrect: true },
+                            { text: "objeto.'propriedade'", isCorrect: false },
+                            { text: "objeto.propriedade()", isCorrect: false },
+                            { text: "objeto::propriedade", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a diferença entre '==' e '===' em JavaScript?",
+                        answers: [
+                            { text: "'==' compara valores, enquanto '===' compara valores e tipos", isCorrect: true },
+                            { text: "'==' é mais rápido que '===' ", isCorrect: false },
+                            { text: "'==' e '===' são iguais", isCorrect: false },
+                            { text: "'===' não existe em JavaScript", isCorrect: false }
+                        ]
+                    }
+                ]
+            }
         ]
     },
     {
-        level: 2, // Nível 2 (Intermediário)
+        level: 3, // Nível 3 (Gold)
         questions: [
-            [
-                {
-                    question: "Qual é a tag HTML usada para inserir uma imagem?",
-                    answers: [
-                        { text: "<img>", isCorrect: true },
-                        { text: "<image>", isCorrect: false },
-                        { text: "<src>", isCorrect: false },
-                        { text: "<picture>", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você centraliza um texto em CSS?",
-                    answers: [
-                        { text: "text-align: center;", isCorrect: true },
-                        { text: "align-text: center;", isCorrect: false },
-                        { text: "text-center: align;", isCorrect: false },
-                        { text: "center: text-align;", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você adiciona um comentário em JavaScript?",
-                    answers: [
-                        { text: "// Isso é um comentário", isCorrect: true },
-                        { text: "<!-- Isso é um comentário -->", isCorrect: false },
-                        { text: "/* Isso é um comentário */", isCorrect: false },
-                        { text: "** Isso é um comentário", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual seletor CSS seleciona todos os elementos <p> dentro de um <div>?",
-                    answers: [
-                        { text: "div > p", isCorrect: false },
-                        { text: "div p", isCorrect: true },
-                        { text: "p > div", isCorrect: false },
-                        { text: "p + div", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você declara uma variável em JavaScript?",
-                    answers: [
-                        { text: "var", isCorrect: false },
-                        { text: "let", isCorrect: false },
-                        { text: "const", isCorrect: false },
-                        { text: "Todas as anteriores", isCorrect: true }
-                    ]
-                }
-            ],
-            [
-                {
-                    question: "Como se chama o documento padrão HTML?",
-                    answers: [
-                        { text: "index.html", isCorrect: true },
-                        { text: "home.html", isCorrect: false },
-                        { text: "main.html", isCorrect: false },
-                        { text: "default.html", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você define uma borda arredondada em CSS?",
-                    answers: [
-                        { text: "border-radius", isCorrect: true },
-                        { text: "round-border", isCorrect: false },
-                        { text: "border-curve", isCorrect: false },
-                        { text: "border-rounded", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a maneira correta de iniciar uma função em JavaScript?",
-                    answers: [
-                        { text: "function minhaFuncao() {}", isCorrect: true },
-                        { text: "func() minhaFuncao {}", isCorrect: false },
-                        { text: "func minhaFuncao() {}", isCorrect: false },
-                        { text: "minhaFuncao function() {}", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você define uma margem em CSS?",
-                    answers: [
-                        { text: "margin", isCorrect: true },
-                        { text: "padding", isCorrect: false },
-                        { text: "spacing", isCorrect: false },
-                        { text: "gap", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é o valor padrão da propriedade CSS 'display' para blocos?",
-                    answers: [
-                        { text: "block", isCorrect: true },
-                        { text: "inline", isCorrect: false },
-                        { text: "flex", isCorrect: false },
-                        { text: "grid", isCorrect: false }
-                    ]
-                }    
-            ],
-            [
-                {
-                    question: "Como você aplica estilos inline a um elemento HTML?",
-                    answers: [
-                        { text: "style='propriedade: valor;'", isCorrect: true },
-                        { text: "class='propriedade: valor;'", isCorrect: false },
-                        { text: "id='propriedade: valor;'", isCorrect: false },
-                        { text: "css='propriedade: valor;'", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual evento JavaScript é disparado quando uma página HTML é carregada?",
-                    answers: [
-                        { text: "onload", isCorrect: true },
-                        { text: "onclick", isCorrect: false },
-                        { text: "onfocus", isCorrect: false },
-                        { text: "onchange", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você define um conjunto de regras CSS para uma classe?",
-                    answers: [
-                        { text: ".minhaClasse {}", isCorrect: true },
-                        { text: "#minhaClasse {}", isCorrect: false },
-                        { text: "minhaClasse {}", isCorrect: false },
-                        { text: "classe.minhaClasse {}", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é o seletor CSS correto para selecionar todos os elementos <p>?",
-                    answers: [
-                        { text: "p", isCorrect: true },
-                        { text: "#p", isCorrect: false },
-                        { text: ".p", isCorrect: false },
-                        { text: "*p", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual unidade CSS é relativa ao tamanho da fonte do elemento pai?",
-                    answers: [
-                        { text: "em", isCorrect: true },
-                        { text: "px", isCorrect: false },
-                        { text: "rem", isCorrect: false },
-                        { text: "%", isCorrect: false }
-                    ]
-                }
-            ]
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Qual atributo é usado para definir uma URL de redirecionamento em um link?",
+                        answers: [
+                            { text: "href", isCorrect: true },
+                            { text: "src", isCorrect: false },
+                            { text: "link", isCorrect: false },
+                            { text: "url", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual tag HTML é usada para incluir um vídeo?",
+                        answers: [
+                            { text: "<video>", isCorrect: true },
+                            { text: "<media>", isCorrect: false },
+                            { text: "<movie>", isCorrect: false },
+                            { text: "<film>", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você cria uma lista não ordenada em HTML?",
+                        answers: [
+                            { text: "<ul>", isCorrect: true },
+                            { text: "<ol>", isCorrect: false },
+                            { text: "<list>", isCorrect: false },
+                            { text: "<li>", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual tag HTML é usada para agrupar elementos de formulário?",
+                        answers: [
+                            { text: "<fieldset>", isCorrect: true },
+                            { text: "<formgroup>", isCorrect: false },
+                            { text: "<group>", isCorrect: false },
+                            { text: "<container>", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a tag correta para criar uma área de texto em um formulário?",
+                        answers: [
+                            { text: "<textarea>", isCorrect: true },
+                            { text: "<input type='text'>", isCorrect: false },
+                            { text: "<input type='textarea'>", isCorrect: false },
+                            { text: "<textbox>", isCorrect: false }
+                        ]
+                    }
+                ]
+            },
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Qual propriedade CSS é usada para aplicar uma sombra a um elemento?",
+                        answers: [
+                            { text: "box-shadow", isCorrect: true },
+                            { text: "shadow", isCorrect: false },
+                            { text: "text-shadow", isCorrect: false },
+                            { text: "filter", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual valor CSS é usado para criar um layout flexível?",
+                        answers: [
+                            { text: "display: flex;", isCorrect: true },
+                            { text: "display: grid;", isCorrect: false },
+                            { text: "layout: flex;", isCorrect: false },
+                            { text: "flex-direction: row;", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você aplica um efeito de transição em CSS?",
+                        answers: [
+                            { text: "transition: propriedade duração;", isCorrect: true },
+                            { text: "transition: duração propriedade;", isCorrect: false },
+                            { text: "transitions: propriedade;", isCorrect: false },
+                            { text: "transition-effect: propriedade duração;", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual propriedade é usada para ajustar o espaçamento entre letras?",
+                        answers: [
+                            { text: "letter-spacing", isCorrect: true },
+                            { text: "word-spacing", isCorrect: false },
+                            { text: "line-height", isCorrect: false },
+                            { text: "spacing", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é o efeito do valor 'opacity' em um elemento?",
+                        answers: [
+                            { text: "Controla a transparência do elemento", isCorrect: true },
+                            { text: "Controla a largura do elemento", isCorrect: false },
+                            { text: "Controla a altura do elemento", isCorrect: false },
+                            { text: "Controla o tamanho da fonte", isCorrect: false }
+                        ]
+                    }
+                ]
+            },
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Qual é o método usado para adicionar um elemento ao final de um array?",
+                        answers: [
+                            { text: "push()", isCorrect: true },
+                            { text: "add()", isCorrect: false },
+                            { text: "append()", isCorrect: false },
+                            { text: "insert()", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a diferença entre 'null' e 'undefined' em JavaScript?",
+                        answers: [
+                            { text: "'null' é um valor definido, 'undefined' indica que uma variável não foi inicializada", isCorrect: true },
+                            { text: "'null' é o mesmo que 'undefined'", isCorrect: false },
+                            { text: "'undefined' é um valor definido, 'null' indica que não existe valor", isCorrect: false },
+                            { text: "Não há diferença entre os dois", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você cria uma função anônima em JavaScript?",
+                        answers: [
+                            { text: "() => {}", isCorrect: true },
+                            { text: "function{} ()", isCorrect: false },
+                            { text: "function anonymous() {}", isCorrect: false },
+                            { text: "function: () {}", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "O que a palavra-chave 'this' refere-se em uma função de objeto?",
+                        answers: [
+                            { text: "O objeto que invoca a função", isCorrect: true },
+                            { text: "Sempre refere-se ao objeto global", isCorrect: false },
+                            { text: "Um objeto específico passado como argumento", isCorrect: false },
+                            { text: "O próprio objeto da função", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é o método usado para transformar um array em uma string?",
+                        answers: [
+                            { text: "join()", isCorrect: true },
+                            { text: "split()", isCorrect: false },
+                            { text: "concat()", isCorrect: false },
+                            { text: "string()", isCorrect: false }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {           
+        level: 4, // Nível 4 (Platinum)
+        questions: [
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Qual atributo HTML é usado para especificar a linguagem de um documento?",
+                        answers: [
+                            { text: "lang", isCorrect: true },
+                            { text: "language", isCorrect: false },
+                            { text: "type", isCorrect: false },
+                            { text: "charset", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você define uma área clicável em uma imagem usando HTML?",
+                        answers: [
+                            { text: "<map>", isCorrect: true },
+                            { text: "<area>", isCorrect: false },
+                            { text: "<image>", isCorrect: false },
+                            { text: "<imgmap>", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você altera o conteúdo de um elemento HTML com id 'meuElemento' usando JavaScript?",
+                        answers: [
+                            { text: "document.getElementById('meuElemento').innerHTML = 'Novo conteúdo';", isCorrect: true },
+                            { text: "document.getElementByClass('meuElemento').innerHTML = 'Novo conteúdo';", isCorrect: false },
+                            { text: "document.querySelector('.meuElemento').innerText = 'Novo conteúdo';", isCorrect: false },
+                            { text: "document.setElementContent('meuElemento', 'Novo conteúdo');", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual tag HTML é usada para criar uma linha horizontal?",
+                        answers: [
+                            { text: "<hr>", isCorrect: true },
+                            { text: "<line>", isCorrect: false },
+                            { text: "<br>", isCorrect: false },
+                            { text: "<separator>", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você especifica que um elemento deve ser exibido como um bloco em HTML?",
+                        answers: [
+                            { text: "<div>", isCorrect: true },
+                            { text: "<span>", isCorrect: false },
+                            { text: "<inline>", isCorrect: false },
+                            { text: "<block>", isCorrect: false }
+                        ]
+                    }
+                ]
+            },
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Qual propriedade CSS é usada para definir a opacidade de um elemento?",
+                        answers: [
+                            { text: "opacity", isCorrect: true },
+                            { text: "transparency", isCorrect: false },
+                            { text: "visibility", isCorrect: false },
+                            { text: "filter", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você aplica uma sombra ao texto usando CSS?",
+                        answers: [
+                            { text: "text-shadow", isCorrect: true },
+                            { text: "shadow-text", isCorrect: false },
+                            { text: "box-shadow", isCorrect: false },
+                            { text: "font-shadow", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual propriedade CSS é usada para controlar o alinhamento de um elemento flexível?",
+                        answers: [
+                            { text: "align-items", isCorrect: true },
+                            { text: "justify-content", isCorrect: false },
+                            { text: "flex-align", isCorrect: false },
+                            { text: "align-content", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual valor da propriedade 'position' fixa um elemento em relação à janela de visualização?",
+                        answers: [
+                            { text: "fixed", isCorrect: true },
+                            { text: "absolute", isCorrect: false },
+                            { text: "relative", isCorrect: false },
+                            { text: "sticky", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a função da propriedade 'overflow' em CSS?",
+                        answers: [
+                            { text: "Controlar o que acontece quando o conteúdo excede o tamanho de um elemento", isCorrect: true },
+                            { text: "Definir a altura de um elemento", isCorrect: false },
+                            { text: "Adicionar margens ao redor de um elemento", isCorrect: false },
+                            { text: "Definir a largura de um elemento", isCorrect: false }
+                        ]
+                    }
+                ]
+            },
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Qual método é usado para converter um objeto JavaScript em uma string JSON?",
+                        answers: [
+                            { text: "JSON.stringify()", isCorrect: true },
+                            { text: "JSON.parse()", isCorrect: false },
+                            { text: "JSON.convert()", isCorrect: false },
+                            { text: "JSON.object()", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual método do Array é usado para inverter a ordem dos elementos?",
+                        answers: [
+                            { text: "reverse()", isCorrect: true },
+                            { text: "invert()", isCorrect: false },
+                            { text: "flip()", isCorrect: false },
+                            { text: "turn()", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você pode fazer um valor padrão para um parâmetro de função?",
+                        answers: [
+                            { text: "function func(param = defaultValue) {}", isCorrect: true },
+                            { text: "function func(param : defaultValue) {}", isCorrect: false },
+                            { text: "function func(param, defaultValue) {}", isCorrect: false },
+                            { text: "function func(param | defaultValue) {}", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a função do método 'reduce()' em arrays?",
+                        answers: [
+                            { text: "Reduzir o array a um único valor", isCorrect: true },
+                            { text: "Criar um novo array", isCorrect: false },
+                            { text: "Filtrar elementos do array", isCorrect: false },
+                            { text: "Ordenar elementos do array", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é o resultado de 'typeof NaN' em JavaScript?",
+                        answers: [
+                            { text: "'number'", isCorrect: true },
+                            { text: "'NaN'", isCorrect: false },
+                            { text: "'undefined'", isCorrect: false },
+                            { text: "'object'", isCorrect: false }
+                        ]
+                    }
+                ]
+            }
         ]
     },
     {
-        level: 3, // Nível 3 (Avançado)
+        level: 5, // Nível 5 (Diamond)
         questions: [
-            [
-                {
-                    question: "Qual método JavaScript é usado para transformar um JSON em objeto?",
-                    answers: [
-                        { text: "JSON.parse()", isCorrect: true },
-                        { text: "JSON.stringify()", isCorrect: false },
-                        { text: "JSON.convert()", isCorrect: false },
-                        { text: "JSON.object()", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual propriedade CSS é usada para adicionar sombra a texto?",
-                    answers: [
-                        { text: "text-shadow", isCorrect: true },
-                        { text: "box-shadow", isCorrect: false },
-                        { text: "shadow-text", isCorrect: false },
-                        { text: "font-shadow", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual tag HTML é usada para definir um formulário?",
-                    answers: [
-                        { text: "<form>", isCorrect: true },
-                        { text: "<input>", isCorrect: false },
-                        { text: "<field>", isCorrect: false },
-                        { text: "<submit>", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você cria um evento 'click' em JavaScript?",
-                    answers: [
-                        { text: "element.addEventListener('click', func);", isCorrect: true },
-                        { text: "element.onClick = func;", isCorrect: false },
-                        { text: "element.click(func);", isCorrect: false },
-                        { text: "addEvent(element, 'click', func);", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você usa uma variável global em JavaScript?",
-                    answers: [
-                        { text: "declarando-a fora de qualquer função", isCorrect: true },
-                        { text: "declarando-a dentro de uma função", isCorrect: false },
-                        { text: "usando 'let' para defini-la", isCorrect: false },
-                        { text: "sem declaração", isCorrect: false }
-                    ]
-                }
-            ],
-            [
-                {
-                    question: "Qual método é usado para remover o último elemento de um array em JavaScript?",
-                    answers: [
-                        { text: "pop()", isCorrect: true },
-                        { text: "shift()", isCorrect: false },
-                        { text: "slice()", isCorrect: false },
-                        { text: "splice()", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a tag HTML para criar um link que abre em uma nova aba?",
-                    answers: [
-                        { text: "<a target='_blank'>", isCorrect: true },
-                        { text: "<link target='_new'>", isCorrect: false },
-                        { text: "<a new='true'>", isCorrect: false },
-                        { text: "<link target='_blank'>", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a diferença entre '==' e '===' em JavaScript?",
-                    answers: [
-                        { text: "'==' verifica valor; '===' verifica valor e tipo", isCorrect: true },
-                        { text: "'==' verifica valor e tipo; '===' verifica apenas valor", isCorrect: false },
-                        { text: "Não há diferença", isCorrect: false },
-                        { text: "'===' verifica apenas tipo; '==' verifica valor", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual propriedade CSS é usada para alinhar itens em um contêiner flexível?",
-                    answers: [
-                        { text: "justify-content", isCorrect: false },
-                        { text: "align-items", isCorrect: true },
-                        { text: "align-content", isCorrect: false },
-                        { text: "align-justify", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é o objetivo do atributo 'defer' no script de JavaScript?",
-                    answers: [
-                        { text: "Executar o script após o HTML ser analisado", isCorrect: true },
-                        { text: "Carregar o script de forma síncrona", isCorrect: false },
-                        { text: "Impedir que o script seja carregado", isCorrect: false },
-                        { text: "Executar o script antes do HTML ser analisado", isCorrect: false }
-                    ]
-                }
-            ],
-            [
-                {
-                    question: "Como você define uma animação em CSS?",
-                    answers: [
-                        { text: "@keyframes", isCorrect: true },
-                        { text: "@animation", isCorrect: false },
-                        { text: "@transitions", isCorrect: false },
-                        { text: "@frames", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você define uma propriedade CSS apenas para um elemento específico em um estilo interno?",
-                    answers: [
-                        { text: "elemento { propriedade: valor; }", isCorrect: true },
-                        { text: "elemento: propriedade valor;", isCorrect: false },
-                        { text: "elemento.propriedade = valor;", isCorrect: false },
-                        { text: "#elemento { propriedade: valor; }", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual propriedade CSS é usada para controlar o espaçamento entre linhas de texto?",
-                    answers: [
-                        { text: "line-height", isCorrect: true },
-                        { text: "letter-spacing", isCorrect: false },
-                        { text: "text-spacing", isCorrect: false },
-                        { text: "height", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você pode verificar o tipo de uma variável em JavaScript?",
-                    answers: [
-                        { text: "typeof", isCorrect: true },
-                        { text: "instanceof", isCorrect: false },
-                        { text: "type()", isCorrect: false },
-                        { text: "varType()", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a diferença entre 'visibility: hidden' e 'display: none' em CSS?",
-                    answers: [
-                        { text: "'visibility: hidden' oculta o elemento, mas ainda ocupa espaço; 'display: none' remove o elemento do fluxo do layout", isCorrect: true },
-                        { text: "'visibility: hidden' remove o elemento do layout; 'display: none' apenas oculta o elemento", isCorrect: false },
-                        { text: "Ambos são a mesma coisa", isCorrect: false },
-                        { text: "'display: none' deixa o elemento transparente; 'visibility: hidden' oculta o elemento completamente", isCorrect: false }
-                    ]
-                }                
-            ]
-        ]
-    },
-    {
-        level: 4, // Nível 4 (Difícil)
-        questions: [
-            [
-                {
-                    question: "Qual método JavaScript é usado para combinar dois ou mais arrays?",
-                    answers: [
-                        { text: "concat()", isCorrect: true },
-                        { text: "join()", isCorrect: false },
-                        { text: "merge()", isCorrect: false },
-                        { text: "combine()", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você faz uma requisição AJAX em JavaScript?",
-                    answers: [
-                        { text: "new XMLHttpRequest()", isCorrect: true },
-                        { text: "fetch()", isCorrect: false },
-                        { text: "$.ajax()", isCorrect: false },
-                        { text: "axios()", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a diferença entre 'let' e 'var' em JavaScript?",
-                    answers: [
-                        { text: "'let' tem escopo de bloco; 'var' tem escopo de função", isCorrect: true },
-                        { text: "'let' e 'var' são iguais", isCorrect: false },
-                        { text: "'var' é mais seguro que 'let'", isCorrect: false },
-                        { text: "'let' não pode ser reatribuído", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você pode evitar que um botão envie um formulário?",
-                    answers: [
-                        { text: "event.preventDefault()", isCorrect: true },
-                        { text: "return false;", isCorrect: false },
-                        { text: "stopPropagation()", isCorrect: false },
-                        { text: "disable()", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual propriedade CSS é usada para criar um layout em grade?",
-                    answers: [
-                        { text: "display: grid;", isCorrect: true },
-                        { text: "layout: grid;", isCorrect: false },
-                        { text: "grid-layout: true;", isCorrect: false },
-                        { text: "grid: true;", isCorrect: false }
-                    ]
-                }
-            ],
-            [
-                {
-                    question: "Qual é a sintaxe correta para importar um módulo em JavaScript?",
-                    answers: [
-                        { text: "import { módulo } from 'caminho';", isCorrect: true },
-                        { text: "include 'caminho';", isCorrect: false },
-                        { text: "require('caminho');", isCorrect: false },
-                        { text: "load('caminho');", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você pode criar um loop que itera sobre um array em JavaScript?",
-                    answers: [
-                        { text: "for (let i = 0; i < array.length; i++) {}", isCorrect: true },
-                        { text: "foreach (array as item) {}", isCorrect: false },
-                        { text: "for each item in array {}", isCorrect: false },
-                        { text: "for (item of array) {}", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a propriedade CSS usada para definir o comportamento flexível?",
-                    answers: [
-                        { text: "flex", isCorrect: true },
-                        { text: "flex-direction", isCorrect: false },
-                        { text: "flex-grow", isCorrect: false },
-                        { text: "flex-basis", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você pode criar um objeto em JavaScript?",
-                    answers: [
-                        { text: "let obj = {}", isCorrect: true },
-                        { text: "let obj = new Object();", isCorrect: false },
-                        { text: "let obj = Object.create();", isCorrect: false },
-                        { text: "let obj = []; ", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a função do método 'filter()' em arrays?",
-                    answers: [
-                        { text: "Criar um novo array com elementos que passam no teste", isCorrect: true },
-                        { text: "Modificar elementos do array", isCorrect: false },
-                        { text: "Ordenar os elementos do array", isCorrect: false },
-                        { text: "Adicionar elementos ao array", isCorrect: false }
-                    ]
-                }
-            ],
-            [
-                {
-                    question: "Qual propriedade CSS é usada para mudar o cursor do mouse?",
-                    answers: [
-                        { text: "cursor", isCorrect: true },
-                        { text: "pointer", isCorrect: false },
-                        { text: "mouse", isCorrect: false },
-                        { text: "style-cursor", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual método JavaScript é usado para encadear várias promessas?",
-                    answers: [
-                        { text: ".then()", isCorrect: true },
-                        { text: ".join()", isCorrect: false },
-                        { text: ".concat()", isCorrect: false },
-                        { text: ".chain()", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "O que significa o valor 'auto' na propriedade CSS 'margin'?",
-                    answers: [
-                        { text: "Centraliza o elemento horizontalmente", isCorrect: true },
-                        { text: "Define margem de 0px", isCorrect: false },
-                        { text: "Aplica margem automática de acordo com o conteúdo", isCorrect: false },
-                        { text: "Define uma margem padrão", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você altera o conteúdo de um elemento HTML com id 'meuElemento' usando JavaScript?",
-                    answers: [
-                        { text: "document.getElementById('meuElemento').innerHTML = 'Novo conteúdo';", isCorrect: true },
-                        { text: "document.getElementByClass('meuElemento').innerHTML = 'Novo conteúdo';", isCorrect: false },
-                        { text: "document.querySelector('.meuElemento').innerText = 'Novo conteúdo';", isCorrect: false },
-                        { text: "document.setElementContent('meuElemento', 'Novo conteúdo');", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "O que acontece se você usar 'let' e 'var' para declarar variáveis com o mesmo nome no mesmo escopo?",
-                    answers: [
-                        { text: "Um erro de sintaxe será lançado", isCorrect: true },
-                        { text: "O valor da variável será sobrescrito", isCorrect: false },
-                        { text: "Ambas as variáveis coexistem sem problemas", isCorrect: false },
-                        { text: "Não acontece nada, o código executa normalmente", isCorrect: false }
-                    ]
-                }
-            ]
-        ]
-    },
-    {
-        level: 5, // Nível 5 (Especialista)
-        questions: [
-            [
-                {
-                    question: "O que é um closure em JavaScript?",
-                    answers: [
-                        { text: "Uma função que lembra seu escopo léxico", isCorrect: true },
-                        { text: "Uma função aninhada", isCorrect: false },
-                        { text: "Uma função que não retorna nada", isCorrect: false },
-                        { text: "Uma função de callback", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "O que faz o método 'reduce()' em um array?",
-                    answers: [
-                        { text: "Aplica uma função a cada elemento e reduz para um único valor", isCorrect: true },
-                        { text: "Cria um novo array com elementos filtrados", isCorrect: false },
-                        { text: "Ordena o array", isCorrect: false },
-                        { text: "Adiciona um novo elemento ao array", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você define um proxy em JavaScript?",
-                    answers: [
-                        { text: "new Proxy(target, handler)", isCorrect: true },
-                        { text: "Proxy(target, handler)", isCorrect: false },
-                        { text: "createProxy(target, handler)", isCorrect: false },
-                        { text: "proxy(target, handler)", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "O que é 'hoisting' em JavaScript?",
-                    answers: [
-                        { text: "Eleva declarações de variáveis e funções para o topo", isCorrect: true },
-                        { text: "Eleva funções somente", isCorrect: false },
-                        { text: "Remove variáveis não utilizadas", isCorrect: false },
-                        { text: "Modifica o escopo das variáveis", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você pode otimizar o desempenho de um site?",
-                    answers: [
-                        { text: "Minificando arquivos CSS e JavaScript", isCorrect: true },
-                        { text: "Aumentando a qualidade das imagens", isCorrect: false },
-                        { text: "Usando mais scripts", isCorrect: false },
-                        { text: "Desabilitando o cache", isCorrect: false }
-                    ]
-                }
-            ],
-            [
-                {
-                    question: "Qual método é usado para evitar que um objeto seja modificado?",
-                    answers: [
-                        { text: "Object.freeze()", isCorrect: true },
-                        { text: "Object.preventExtensions()", isCorrect: false },
-                        { text: "Object.seal()", isCorrect: false },
-                        { text: "Object.defineProperty()", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a diferença entre 'null' e 'undefined' em JavaScript?",
-                    answers: [
-                        { text: "'null' é um valor atribuído; 'undefined' é uma variável não inicializada", isCorrect: true },
-                        { text: "'undefined' é um valor atribuído; 'null' é uma variável não inicializada", isCorrect: false },
-                        { text: "Ambos são iguais", isCorrect: false },
-                        { text: "'null' é um objeto; 'undefined' é um tipo primitivo", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "O que faz o método 'slice()' em um array?",
-                    answers: [
-                        { text: "Retorna uma cópia de uma parte do array", isCorrect: true },
-                        { text: "Adiciona elementos ao array", isCorrect: false },
-                        { text: "Remove elementos do array", isCorrect: false },
-                        { text: "Ordena o array", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você cria uma função de callback em JavaScript?",
-                    answers: [
-                        { text: "Passando uma função como argumento para outra função", isCorrect: true },
-                        { text: "Definindo uma função dentro de outra", isCorrect: false },
-                        { text: "Usando 'setTimeout'", isCorrect: false },
-                        { text: "Usando 'setInterval'", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Qual é a diferença entre 'async' e 'await' em JavaScript?",
-                    answers: [
-                        { text: "'async' define uma função assíncrona; 'await' pausa a execução até uma Promise ser resolvida", isCorrect: true },
-                        { text: "'async' pausa a execução; 'await' define uma função assíncrona", isCorrect: false },
-                        { text: "Ambos são iguais", isCorrect: false },
-                        { text: "'await' define uma função; 'async' pausa a execução", isCorrect: false }
-                    ]
-                }
-            ],
-            [
-                {
-                    question: "O que é uma Promise em JavaScript?",
-                    answers: [
-                        { text: "Um objeto que representa a conclusão (ou falha) de uma operação assíncrona", isCorrect: true },
-                        { text: "Uma função que retorna um valor imediatamente", isCorrect: false },
-                        { text: "Um tipo de variável que aceita múltiplos valores", isCorrect: false },
-                        { text: "Um método para manipular arrays", isCorrect: false }
-                    ]
-                },                
-                {
-                    question: "O que é o Event Loop em JavaScript?",
-                    answers: [
-                        { text: "Um mecanismo que lida com operações assíncronas", isCorrect: true },
-                        { text: "Um loop de iteração para arrays", isCorrect: false },
-                        { text: "Um método para controlar eventos", isCorrect: false },
-                        { text: "Uma função que repete tarefas", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "Como você pode manipular o DOM usando JavaScript moderno?",
-                    answers: [
-                        { text: "document.querySelector()", isCorrect: true },
-                        { text: "document.getElementByClass()", isCorrect: false },
-                        { text: "document.query()", isCorrect: false },
-                        { text: "document.selectElement()", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "O que é a técnica 'CSS Grid Layout'?",
-                    answers: [
-                        { text: "Um sistema de layout bidimensional que permite posicionar elementos em linhas e colunas", isCorrect: true },
-                        { text: "Uma técnica de animação CSS", isCorrect: false },
-                        { text: "Um método para aplicar estilos apenas em dispositivos móveis", isCorrect: false },
-                        { text: "Um modelo de layout unidimensional", isCorrect: false }
-                    ]
-                },
-                {
-                    question: "O que é o Shadow DOM?",
-                    answers: [
-                        { text: "Uma técnica que permite encapsular o estilo e a estrutura de um componente", isCorrect: true },
-                        { text: "Uma biblioteca para gerenciar estados no React", isCorrect: false },
-                        { text: "Um tipo de animação CSS", isCorrect: false },
-                        { text: "Uma forma de estilizar elementos do DOM", isCorrect: false }
-                    ]
-                }                
-            ]
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "O que são 'data attributes' em HTML?",
+                        answers: [
+                            { text: "Atributos personalizados que começam com 'data-'", isCorrect: true },
+                            { text: "Atributos que definem a aparência de um elemento", isCorrect: false },
+                            { text: "Atributos que armazenam informações de estilo", isCorrect: false },
+                            { text: "Atributos de acessibilidade", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "O que é a semântica em HTML?",
+                        answers: [
+                            { text: "A maneira como as tags HTML transmitem significado", isCorrect: true },
+                            { text: "Um método de estilização", isCorrect: false },
+                            { text: "Uma técnica de otimização de SEO", isCorrect: false },
+                            { text: "Um tipo de script", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "O que faz o elemento &ltiframe&gt?",
+                        answers: [
+                            { text: "Incorpora outro documento HTML dentro do atual", isCorrect: true },
+                            { text: "Exibe imagens", isCorrect: false },
+                            { text: "Define uma nova página", isCorrect: false },
+                            { text: "Cria um link para um arquivo", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "O que faz a tag &ltnoscript&gt?",
+                        answers: [
+                            { text: "Exibe conteúdo alternativo se o JavaScript estiver desativado", isCorrect: true },
+                            { text: "Cria um script que não pode ser executado", isCorrect: false },
+                            { text: "Adiciona scripts a uma página", isCorrect: false },
+                            { text: "Define o estilo para scripts", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a finalidade da tag &ltfooter&gt?",
+                        answers: [
+                            { text: "Define um rodapé para o documento", isCorrect: true },
+                            { text: "Cria um novo layout", isCorrect: false },
+                            { text: "Insere imagens", isCorrect: false },
+                            { text: "Exibe o conteúdo principal", isCorrect: false }
+                        ]
+                    },
+                ]
+            },
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "O que é a propriedade 'z-index'?",
+                        answers: [
+                            { text: "Controla a ordem de empilhamento de elementos sobrepostos", isCorrect: true },
+                            { text: "Define a largura de um elemento", isCorrect: false },
+                            { text: "Aplica um efeito de transição", isCorrect: false },
+                            { text: "Controla a opacidade de um elemento", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual a função do seletor '::after' no CSS?",
+                        answers: [
+                            { text: "Insere conteúdo após um elemento", isCorrect: true },
+                            { text: "Altera a cor de fundo", isCorrect: false },
+                            { text: "Cria um novo elemento", isCorrect: false },
+                            { text: "Remove conteúdo de um elemento", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "O que é Flexbox?",
+                        answers: [
+                            { text: "Um modelo de layout para distribuir espaço entre itens em um contêiner", isCorrect: true },
+                            { text: "Uma propriedade para estilizar texto", isCorrect: false },
+                            { text: "Um tipo de animação CSS", isCorrect: false },
+                            { text: "Um seletor CSS", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "O que faz a propriedade 'display: grid;'?",
+                        answers: [
+                            { text: "Ativa o layout de grid para o elemento", isCorrect: true },
+                            { text: "Oculta o elemento", isCorrect: false },
+                            { text: "Altera o formato do texto", isCorrect: false },
+                            { text: "Ajusta o tamanho do elemento", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a finalidade do seletor ':hover'?",
+                        answers: [
+                            { text: "Estilizar um elemento quando o mouse está sobre ele", isCorrect: true },
+                            { text: "Estilizar um elemento ao ser clicado", isCorrect: false },
+                            { text: "Aplicar estilos a todos os elementos", isCorrect: false },
+                            { text: "Definir um estilo padrão para um elemento", isCorrect: false }
+                        ]
+                    }
+                ]
+            },
+            {
+                completed: false,
+                quests: [
+                    {
+                        question: "Qual é a diferença entre 'call()' e 'apply()'?",
+                        answers: [
+                            { text: "'call()' passa argumentos separadamente; 'apply()' passa um array de argumentos", isCorrect: true },
+                            { text: "'call()' não muda o contexto; 'apply()' muda", isCorrect: false },
+                            { text: "Ambos são iguais", isCorrect: false },
+                            { text: "'call()' cria um novo objeto; 'apply()' não", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "O que faz o método 'setTimeout'?",
+                        answers: [
+                            { text: "Executa uma função após um atraso especificado", isCorrect: true },
+                            { text: "Executa uma função imediatamente", isCorrect: false },
+                            { text: "Repete uma função em intervalos específicos", isCorrect: false },
+                            { text: "Cancela uma função", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Como você pode prevenir o comportamento padrão de um evento?",
+                        answers: [
+                            { text: "event.preventDefault()", isCorrect: true },
+                            { text: "event.stopPropagation()", isCorrect: false },
+                            { text: "return false", isCorrect: false },
+                            { text: "stopDefault()", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "O que é um 'Promise.all()'?",
+                        answers: [
+                            { text: "Uma função que executa várias promessas em paralelo", isCorrect: true },
+                            { text: "Uma função que retorna uma única promessa", isCorrect: false },
+                            { text: "Uma técnica para encadear promessas", isCorrect: false },
+                            { text: "Uma função que aguarda uma promessa ser resolvida", isCorrect: false }
+                        ]
+                    },
+                    {
+                        question: "Qual é a diferença entre 'let' e 'var'?",
+                        answers: [
+                            { text: "'let' tem escopo de bloco; 'var' tem escopo de função", isCorrect: true },
+                            { text: "'let' é global; 'var' é local", isCorrect: false },
+                            { text: "Ambos são iguais", isCorrect: false },
+                            { text: "'let' não pode ser redeclarado; 'var' pode", isCorrect: false }
+                        ]
+                    }
+                ]
+            }
         ]
     }
 ];
