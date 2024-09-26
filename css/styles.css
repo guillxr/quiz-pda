@@ -4,7 +4,21 @@
     --background: #FFF9E4;
     --btn-primary-bg: #F03986;
     --btn-primary-shd: #571530;
-    --btn-text: #000000BD
+    --btn-text: #000000BD;
+    --btn-correct: #28A745;
+    --btn-correct-shd: #155724;
+    --btn-incorrect: #DC3545;
+    --btn-incorrect-shd: #7A1A28;
+    --btn-none: #CCCCCC;
+    --btn-none-shd: #7A7A7A;
+    --btn-option-0: #FF8437;
+    --btn-option-0-shd: #C45A1E;
+    --btn-option-1: #43DDA7;
+    --btn-option-1-shd: #2C8D6E;
+    --btn-option-2: #F2CA3C;
+    --btn-option-2-shd: #B5931F;
+    --btn-option-3: #3C9BF2;
+    --btn-option-3-shd: #2466A8;
 }
 
 * {
@@ -36,10 +50,14 @@ li {
     border: 0.2rem solid var(--btn-primary-shd);
     box-shadow: 0.2rem 0.2rem 0 var(--btn-primary-shd);
     transition: all 0.1s ease;
+    cursor: pointer;
 }
 
-.button:active {
-    background-color: var(--btn-primary-bg);
+.button:disabled {
+    cursor: default;
+}
+
+.button:active:not(:disabled){
     box-shadow: none;
     transform: translateX(0.2rem) translateY(0.2rem);
 }
