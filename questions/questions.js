@@ -4,6 +4,7 @@ const quizData = [
         questions: [
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "O que significa HTML?",
@@ -54,6 +55,7 @@ const quizData = [
             },
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Como você define a cor de fundo em CSS?",
@@ -104,6 +106,7 @@ const quizData = [
             },
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Em JavaScript, qual comando exibe uma mensagem de alerta?",
@@ -159,6 +162,7 @@ const quizData = [
         questions: [
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Qual é a tag HTML usada para inserir uma imagem?",
@@ -209,6 +213,7 @@ const quizData = [
             },
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Como você centraliza um texto em CSS?",
@@ -259,6 +264,7 @@ const quizData = [
             },
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Como você declara uma variável usando o escopo de bloco em JavaScript?",
@@ -314,6 +320,7 @@ const quizData = [
         questions: [
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Qual atributo é usado para definir uma URL de redirecionamento em um link?",
@@ -364,6 +371,7 @@ const quizData = [
             },
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Qual propriedade CSS é usada para aplicar uma sombra a um elemento?",
@@ -414,6 +422,7 @@ const quizData = [
             },
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Qual é o método usado para adicionar um elemento ao final de um array?",
@@ -469,6 +478,7 @@ const quizData = [
         questions: [
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Qual atributo HTML é usado para especificar a linguagem de um documento?",
@@ -519,6 +529,7 @@ const quizData = [
             },
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Qual propriedade CSS é usada para definir a opacidade de um elemento?",
@@ -569,6 +580,7 @@ const quizData = [
             },
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Qual método é usado para converter um objeto JavaScript em uma string JSON?",
@@ -624,6 +636,7 @@ const quizData = [
         questions: [
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "O que são 'data attributes' em HTML?",
@@ -674,6 +687,7 @@ const quizData = [
             },
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "O que é a propriedade 'z-index'?",
@@ -724,6 +738,7 @@ const quizData = [
             },
             {
                 completed: false,
+                score: 0,
                 quests: [
                     {
                         question: "Qual é a diferença entre 'call()' e 'apply()'?",
@@ -774,4 +789,4 @@ const quizData = [
             }
         ]
     }
-];
+]
