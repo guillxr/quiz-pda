@@ -17,27 +17,34 @@ avatarOptions.forEach(avatar => {
     })
 })
 
+
 // adiciona o evento de submit no formulario para ser concluido o cadastro
-registerForm.addEventListener('submit', (event) => {
+registerForm.addEventListener('submit', () => {
     event.preventDefault()
-    checkInputUsername()
-    getUserData()
-    insertFirstAcessElements()
-    show(homeSection)
-    registerSection.remove()
+    if(checkInputUsername()) {
+        saveData()
+        loadUserHome('Começar')
+    }
 })
 
 // checa se o usuario esta salvo no localstorage e chama as funções necessarias
 function checkDataStorage() {
     if (localStorage.getItem("user")) {
-        registerSection.remove()
-        show(homeSection)
-        getUserData()
-        getRankAndUpdate()
-        insertButtonHomeText('Continuar')
+        loadUserHome('Continuar')
     }
 }
 
+function loadUserHome(message) {
+    registerSection.remove()
+    getRankAndUpdate()
+    insertButtonHomeText(message)
+    show(homeSection)
+    if(!localStorage.getItem('quiz-data')) {
+        setQuizDataInLocalStorage()
+    } else {
+        getQuizDataAndUpdateLocal()
+    }
+}
 // checa o valor inserido no input, caso não seja digitado nada ou tenha menos que 3 caracteres chama a função errorInput()
 function checkInputUsername() {
     const usernameValue = usernameInput.value
@@ -47,14 +54,14 @@ function checkInputUsername() {
     } else if (usernameValue.length < 3) {
         errorInput("Deve conter pelo menos 3 caracteres!")
     } else {
-        saveData()
+        return true
     }
 }
 
 // checa se o avatar foi selecionado, caso não, define um avatar aleatorio
 function checkInputAvatar() {
     if(!avatarInputValue) {
-        avatarInputValue = `images/avatars/${Math.floor(Math.random() * 8)}.svg`
+        avatarInputValue = `images/avatars/avatar-${Math.floor(Math.random() * 8)}.svg`
     }
 }
 
@@ -67,7 +74,7 @@ function errorInput(message) {
         let a = document.createElement('span')
         a.id = 'error-element'
         a.innerHTML = message
-        formItem.className = "error"
+        formItem.className = "error" 
         usernameField.appendChild(a)
     } else {
         error.innerHTML = message
