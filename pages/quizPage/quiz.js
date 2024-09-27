@@ -171,6 +171,7 @@ function handleQuestEndButton() {
     addScoreInXp()
     stopCountdown()
     getRankAndUpdate()
+    updateQuizData(currentLevelQuestions, currentQuizQuest)
     showQuests()
     show(selectionQuiz)
     hide(quizSection)
