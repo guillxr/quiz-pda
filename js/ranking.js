@@ -37,11 +37,13 @@ function updateUserRankInLocalStorage(newRank) {
 
 // gera o rank atual e atualiza o valor das propriedades que contém o rank
 function getRankAndUpdate() {
+    getUserData()
+    
     let newRank = getCurrentAndNextRank()
     if(newRank.currentRank != user.rank) {
         user.rank = newRank.currentRank
         updateUserRankInLocalStorage(newRank.currentRank)
-    }
+    } 
     loadUserRank()
     loadUserXp()
 }
