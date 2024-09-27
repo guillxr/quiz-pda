@@ -2,6 +2,8 @@
 
 :root {
     --background: #FFF9E4;
+    --white: #FFF;
+    --text: #000000e2;
     --btn-primary-bg: #F03986;
     --btn-primary-shd: #571530;
     --btn-text: #000000BD;
@@ -26,6 +28,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: var(--text);
 }
 
 body {
