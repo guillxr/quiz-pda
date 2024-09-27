@@ -37,15 +37,23 @@ function loadUserAvatar() {
 
 // insere o src da badge do e o nome do rank nos elementos html que possuem a sua classs
 function loadUserRank() {
-    const userRankBadge = document.getElementsByClassName('user-avatar-rank');
     const userRankElements = document.getElementsByClassName('user-rank-content');
 
     for (let i = 0; i < userRankElements.length; i++) {
         let rankElement = userRankElements[i]
-        let rankBadge = userRankBadge[i]
 
         rankElement.textContent = user.rank
         rankElement.setAttribute('data-rank', user.rank)
+    }
+    loadUserBadge()
+}
+
+function loadUserBadge() {
+    const userRankBadge = document.getElementsByClassName('user-avatar-rank');
+
+    for (let i = 0; i < userRankBadge.length; i++) {
+        let rankBadge = userRankBadge[i]
+
         rankBadge.src = `images/ranksBadges/${user.rank}.svg`
     }
 }
