@@ -18,5 +18,7 @@ function insertHomeMessageText() {
     homeMessage.textContent = `Olá, ${user.username}. Você está pronto para começar?`
 }
 
-
-
+function nextButtonHome() {
+    hide(homeSection)
+    show(selectionQuiz)
+}
