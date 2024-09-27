@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/rankColors.css">
     <link rel="stylesheet" href="pages/registerPage/register.css">
     <link rel="stylesheet" href="pages/homePage/home.css">
+    <link rel="stylesheet" href="pages/selectionQuiz/selectionQuiz.css">
     <link rel="stylesheet" href="pages/quizPage/quiz.css">
 </head>
 <body>
@@ -59,7 +60,7 @@
         </div>
     </div>
 
-    <div id="home" class="hidden">
+    <div id="home" class="hidden">       
         <div id="home-section">
             <div class="user-avatar">
                 <img src="" alt="" class="user-avatar-content">
@@ -90,21 +91,37 @@
             </button>
         </div>
     </div>
-    
-    <div id="quiz">
-        <div class="user-avatar">
-            <img src="" alt="" class="user-avatar-content">
-            <img src="" alt="" class="user-avatar-rank">
+
+    <div id="selection-quiz" class="hidden">
+        <div id="selection-quiz-section">
         </div>
-        <div id="quiz-card">
-            <div id="info-quest">
-                <span id="current-question">1 / 5</span>
-                <span id="current-score">0 XP</span>
-                <span id="current-time">4:51</span>
+    </div>
+
+    <div id="quiz" class="hidden">
+        <nav class="nav-quiz">
+            <div class="user-avatar">
+                <img src="" alt="" class="user-avatar-content">
+                <img src="" alt="" class="user-avatar-rank">
             </div>
-            <h2 id="question">Qual é a tag HTML usada para inserir uma imagem?</h2>
-            <div id="answer-buttons"><button class="button btn-0" btn-id="0">&lt;src&gt;</button><button class="button btn-1" btn-id="1" data-correct="true">&lt;img&gt;</button><button class="button btn-2" btn-id="2">&lt;picture&gt;</button><button class="button btn-3" btn-id="3">&lt;image&gt;</button></div>
-            <div id="quiz-button"><button class="button" id="quiz-next-button">Proximo</button></div>
+        </nav>
+        <div id="quiz-section">
+            <div id="quiz-card">
+                <div id="info-quest">
+                    <span id="current-question"></span>
+                    <span id="current-score"></span>
+                    <div id="stopwatch">
+                        <span id="current-time"></span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="8" cy="8" r="7" stroke="#151515" stroke-width="2"/>
+                            <path d="M8 5V8L9.5 9.5" stroke="#151515" stroke-width="2" stroke-linecap="square"/>
+                            </svg>
+                    </div>
+                </div>
+                <h2 id="question"></h2>
+                <div id="answer-buttons">
+                </div>
+                <div id="quiz-button"></div>
+            </div>
         </div>
     </div>
     <script src="js/script.js"></script>
@@ -113,6 +130,8 @@
     <script src="js/ranking.js"></script>
     <script src="questions/questions.js"></script>
     <script src="questions/updateQuestions.js"></script>
+    <script src="pages/quizPage/quiz.js"></script>
+    <script src="pages/selectionQuiz/selectionQuiz.js" defer></script>
     <script src="pages/registerPage/register.js" defer></script>
 </body>
 </html>
