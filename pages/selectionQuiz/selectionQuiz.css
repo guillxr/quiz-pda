@@ -1,0 +1,21 @@
+#selection-quiz {
+    margin: 2rem;
+}
+
+#selection-quiz-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#selection-quiz-section .button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#selection-quiz-section .button span {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
