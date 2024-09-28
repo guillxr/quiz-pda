@@ -19,6 +19,7 @@ function insertHomeMessageText() {
 }
 
 function nextButtonHome() {
+    showQuests()
     hide(homeSection)
-    show(selectionQuiz)
+    show(quiz)
 }
