@@ -1,0 +1,20 @@
+
+.nav-quiz{
+    height: 80px;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    border-bottom: .3rem solid var(--text);
+}
+
+.nav-quiz .user-avatar{
+    width: 65px;
+    height: 65px;
+}
+
+.nav-quiz button{
+    display: flex;
+    background: none;
+}
