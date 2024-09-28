@@ -23,21 +23,22 @@ registerForm.addEventListener('submit', () => {
     event.preventDefault()
     if(checkInputUsername()) {
         saveData()
-        loadUserHome('Começar')
+        loadUserHome()
+        insertFirstAcessElements()
     }
 })
 
 // checa se o usuario esta salvo no localstorage e chama as funções necessarias
 function checkDataStorage() {
     if (localStorage.getItem("user")) {
-        loadUserHome('Continuar')
+        loadUserHome()
+        insertButtonHomeText('Continuar')
     }
 }
 
 function loadUserHome(message) {
     registerSection.remove()
     getRankAndUpdate()
-    insertButtonHomeText(message)
     show(homeSection)
     if(!localStorage.getItem('quiz-data')) {
         setQuizDataInLocalStorage()
