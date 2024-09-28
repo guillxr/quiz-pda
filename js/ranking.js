@@ -1,9 +1,9 @@
 const ranks = [
     { name: 'bronze', minXp: 0 },
-    { name: 'silver', minXp: 100 },
-    { name: 'gold', minXp: 150 },
-    { name: 'platinum', minXp: 225 },
-    { name: 'diamond', minXp: 338 }
+    { name: 'silver', minXp: 150 },
+    { name: 'gold', minXp: 300 },
+    { name: 'platinum', minXp: 450 },
+    { name: 'diamond', minXp: 600 }
 ]
 
 // retorna o nome do rank atual pelo xp e o valor minimo do proximo rank
