@@ -1,7 +1,11 @@
-const quizSection = document.getElementById('quiz')
+const quiz = document.getElementById('quiz')
+const quizSection = document.getElementById('quiz-section')
 const questionElement = document.getElementById('question')
 const answerButtons = document.getElementById('answer-buttons')
 const quizButton = document.getElementById('quiz-button')
+const quizScoreButton = document.getElementById('quiz-score-button')
+const quizScoreText = document.getElementById('quiz-score-text')
+const quizCard = document.getElementById('quiz-card')
 const selectionQuizSection = document.getElementById('selection-quiz-section')
 const selectionQuiz = document.getElementById('selection-quiz')
 const currentQuestionElement = document.getElementById('current-question')
@@ -26,17 +30,14 @@ function shuffle(array) {
 }
 
 function startQuiz() {
-    createButton('quiz-next-button', 'Proximo', handleNextButton)
+    hideScore()
+    createButton('quiz-next-button', 'Proximo', quizButton, handleNextButton)
 
-    const tryAgainButton = document.getElementById('quiz-try-again-button')
+
     const nextButton = document.getElementById('quiz-next-button')
 
     currentQuestionIndex = 0
     score = 0
-
-    if(tryAgainButton) {
-        quizButton.removeChild(tryAgainButton)
-    }
     
     nextButton.style.display = 'none'
     showQuestions()
@@ -73,17 +74,20 @@ function showQuestions() {
 function showInfoQuest() {
     currentQuestionElement.innerHTML = `${currentQuestionIndex + 1} / 5`
     currentScoreElement.innerHTML = `${score} XP`
+    quizCard.style.display = 'flex'
 
     startCountdown()
 }
 
 function resetState() {
-    if(quizButton.firstChild.id === 'quiz-next-button') {
-        quizButton.firstChild.style.display = 'none'
-    } else {
-        quizButton.removeChild(quizButton.firstChild)
+    if(quizButton.firstChild) {
+        if(quizButton.firstChild.id === 'quiz-next-button') {
+            quizButton.firstChild.style.display = 'none'
+        } else {
+            quizButton.removeChild(quizButton.firstChild)
+        }
     }
-
+    
     while(answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild)
     }
@@ -125,17 +129,32 @@ function showScore() {
     stopCountdown()
     resetElements()
 
-    questionElement.innerHTML = `Seu score foi de ${score} em ${quizData[currentLevelQuestions].questions[currentQuizQuest].quests.length} questões`
+    quizScoreText.innerHTML = `Seu score foi de ${score} em ${quizData[currentLevelQuestions].questions[currentQuizQuest].quests.length} questões`
 
-    createButton('quiz-finish-button', 'Continuar', handleQuestEndButton)
+    createButton('quiz-finish-button', 'Continuar', quizScoreButton, handleQuestEndButton)
     
     if(score < 50) {
-    createButton('quiz-try-again-button', 'Tentar novamente', startQuiz)
+    createButton('quiz-try-again-button', 'Tentar novamente', quizScoreButton, startQuiz)
     }
 }
 
+function hideScore() {
+    const finishButton = document.getElementById('quiz-finish-button')
+    const tryAgainButton = document.getElementById('quiz-try-again-button')
+
+    if(finishButton) {
+        quizScoreButton.removeChild(finishButton)
+    }
+    if(tryAgainButton) {
+        quizScoreButton.removeChild(tryAgainButton)
+    }
+    quizScoreText.innerHTML = ''
+}
+
 function resetElements() {
+    quizCard.style.display = 'none'
     quizButton.removeChild(quizButton.firstChild);
+    questionElement.innerHTML = ''
     currentQuestionElement.innerHTML = ''
     currentScoreElement.innerHTML = ''
     currentTimerElement.innerHTML = ''
@@ -173,6 +192,7 @@ function handleQuestEndButton() {
     getRankAndUpdate()
     updateQuizData(currentLevelQuestions, currentQuizQuest)
     showQuests()
+    hideScore()
     show(selectionQuiz)
     hide(quizSection)
     questionElement.innerHTML = ''
@@ -205,12 +225,12 @@ function formatTime(seconds) {
     return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`
 }
 
-function createButton( id, text, func) {
+function createButton( id, text, element, func) {
     const button =  document.createElement('button')
     button.classList.add('button')
     button.id = id
     button.textContent = text
-    quizButton.appendChild(button)
+    element.appendChild(button)
 
     button.addEventListener('click', func)
 }
