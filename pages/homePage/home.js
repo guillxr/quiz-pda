@@ -15,7 +15,7 @@ function insertButtonHomeText(text) {
 // insere a mensagem caso seja chamado
 function insertHomeMessageText() {
     const homeMessage = document.getElementById('home-message')
-    homeMessage.textContent = `Olá, ${user.username}. Você está pronto para começar?`
+    homeMessage.textContent = `Olá, ${user.username}. Seja bem-vindo! Você está pronto para começar?`
 }
 
 function nextButtonHome() {
