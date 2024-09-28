@@ -1,5 +1,4 @@
 function showQuests() {
-    updateQuizData(currentLevelQuestions, currentQuizQuest)
     getQuizDataAndUpdateLocal()
     
     for (let i = 0; i < quizData.length; i++) {
@@ -8,6 +7,7 @@ function showQuests() {
             const button = document.createElement('button')
             let nameQuiz = checkNameQuiz(questNum)
             let currentScore = quest[questNum].score
+            let currentRankId = checkRankId(user.rank)
 
             button.textContent = `Quiz ${nameQuiz}`
             button.classList.add('button')
@@ -15,6 +15,8 @@ function showQuests() {
             button.setAttribute('quest', questNum)
             selectionQuizSection.appendChild(button)
             
+            
+
             if(quest[questNum].completed === true) {
                 const percentage = getPercentage(currentScore)
                 const scoreIcon = getScoreIcon(currentScore)
@@ -22,7 +24,7 @@ function showQuests() {
                 button.classList.add('correct')
                 button.innerHTML += `<span>${percentage}% ${scoreIcon}</span>`
             }
-
+            
             if(currentScore >= 50) {
                 button.disabled = true
             } else {
@@ -46,6 +48,21 @@ function startQuizButton(e) {
     hide(selectionQuiz)
     show(quizSection)
     startQuiz()
+}
+
+function checkRankId(rank) {
+    switch(rank) {
+        case 'bronze':
+            return 1
+        case 'silver':
+            return 2
+        case 'gold':
+            return 3
+        case 'platinum':
+            return 4
+        case 'diamond':
+            return 5
+    }
 }
 
 function checkNameQuiz(num) {
@@ -74,5 +91,3 @@ function getScoreIcon(score) {
             </svg>`;
     }
 }
-
-showQuests()
