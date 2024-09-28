@@ -6,6 +6,7 @@
     <title>Quiz PDA</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/rankColors.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="pages/registerPage/register.css">
     <link rel="stylesheet" href="pages/homePage/home.css">
     <link rel="stylesheet" href="pages/selectionQuiz/selectionQuiz.css">
@@ -92,22 +93,41 @@
         </div>
     </div>
 
-    <div id="selection-quiz" class="hidden">
-        <div id="selection-quiz-section">
-        </div>
-    </div>
-
     <div id="quiz" class="hidden">
         <nav class="nav-quiz">
+            <button><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-filter-left" viewBox="0 0 16 16">
+                <path d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </button>
             <div class="user-avatar">
                 <img src="" alt="" class="user-avatar-content">
                 <img src="" alt="" class="user-avatar-rank">
             </div>
         </nav>
-        <div id="quiz-section">
+        <div id="selection-quiz">
+            <div id="selection-quiz-section">
+            </div>
+        </div>
+        <div id="quiz-section" class="hidden">
             <div id="quiz-card">
                 <div id="info-quest">
-                    <span id="current-question"></span>
+                    <div id="number-question">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_202_80)">
+                            <circle cx="8" cy="8" r="7" stroke="#151515" stroke-width="2"/>
+                            <path d="M7 8.28491C7 7.66359 7.50368 7.15991 8.125 7.15991H9V9.15991C9 9.7122 8.55228 10.1599 8 10.1599C7.44772 10.1599 7 9.7122 7 9.15991V8.28491Z" fill="#151515"/>
+                            <circle cx="8" cy="11.75" r="1" fill="#151515"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.02011 5.88402C6.97431 5.94119 6.92237 5.99321 6.86528 6.0391C6.89212 6.0136 6.95384 5.95407 7.02011 5.88402Z" fill="#151515"/>
+                            <path d="M7.9999 9.19995C8.59324 9.19995 9.17326 9.02401 9.66661 8.69436C10.16 8.36472 10.5445 7.89618 10.7715 7.348C10.9986 6.79982 11.058 6.19662 10.9423 5.61468C10.8265 5.03274 10.5408 4.49819 10.1212 4.07863C9.70166 3.65907 9.16711 3.37335 8.58517 3.2576C8.00323 3.14184 7.40002 3.20125 6.85184 3.42831C6.30367 3.65538 5.78419 4.14598 5.45454 4.63932C5.31974 4.80973 5.23926 5.02509 5.23926 5.25925C5.23926 5.81153 5.68697 6.25925 6.23926 6.25925C6.47621 6.25925 6.69392 6.17683 6.86528 6.0391C6.89212 6.0136 6.95384 5.95407 7.02011 5.88402C7.08611 5.81425 7.15663 5.73404 7.20169 5.6666C7.30717 5.50873 7.4571 5.38569 7.63252 5.31303C7.80794 5.24037 8.00096 5.22136 8.18718 5.2584C8.37341 5.29544 8.54446 5.38687 8.67872 5.52113C8.81298 5.65539 8.90441 5.82644 8.94145 6.01267C8.97849 6.19889 8.95948 6.39191 8.88682 6.56733C8.81416 6.74275 8.69112 6.89268 8.53325 6.99816C8.37537 7.10365 8.18977 7.15995 7.9999 7.15995L7.9999 9.19995Z" fill="#151515"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_202_80">
+                            <rect width="16" height="16" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <span id="current-question"></span>
+                    </div>
                     <span id="current-score"></span>
                     <div id="stopwatch">
                         <span id="current-time"></span>
@@ -121,6 +141,10 @@
                 <div id="answer-buttons">
                 </div>
                 <div id="quiz-button"></div>
+            </div>
+            <div id="quiz-score">
+                <h2 id="quiz-score-text"></h2>
+                <div id="quiz-score-button"></div>
             </div>
         </div>
     </div>
