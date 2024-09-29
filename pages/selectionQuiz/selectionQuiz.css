@@ -19,3 +19,16 @@
     align-items: center;
     gap: .5rem;
 }
+
+#selection-quiz-section .button.open-quiz {
+    background-color: var(--btn-correct);
+}
+
+#selection-quiz-section .button.locked-quiz {
+    background-color: var(--btn-incorrect);
+}
+
+#selection-quiz-section .button .lock-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}

@@ -1,5 +1,14 @@
 function showQuests() {
     getQuizDataAndUpdateLocal()
+    const lockIcon = `<svg class="lock-icon" fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        viewBox="0 0 330 330" xml:space="preserve">
+                        <g id="XMLID_509_">
+                        <path id="XMLID_510_" d="M65,330h200c8.284,0,15-6.716,15-15V145c0-8.284-6.716-15-15-15h-15V85c0-46.869-38.131-85-85-85
+                        S80,38.131,80,85v45H65c-8.284,0-15,6.716-15,15v170C50,323.284,56.716,330,65,330z M180,234.986V255c0,8.284-6.716,15-15,15
+                        s-15-6.716-15-15v-20.014c-6.068-4.565-10-11.824-10-19.986c0-13.785,11.215-25,25-25s25,11.215,25,25
+                        C190,223.162,186.068,230.421,180,234.986z M110,85c0-30.327,24.673-55,55-55s55,24.673,55,55v45H110V85z"/>
+                        </g>
+                        </svg>`
     
     for (let i = 0; i < quizData.length; i++) {
         const quest = quizData[i].questions
@@ -11,6 +20,9 @@ function showQuests() {
 
             button.textContent = `Quiz ${nameQuiz}`
             button.classList.add('button')
+            button.classList.add(`${verifyQuizAccess(i) ? 'correct' : 'incorrect'}`)
+            button.disabled = verifyQuizAccess(i) ? false : true;
+            button.innerHTML += verifyQuizAccess(i) ? '' : `${lockIcon}`;
             button.setAttribute('level', i)
             button.setAttribute('quest', questNum)
             selectionQuizSection.appendChild(button)
@@ -90,4 +102,13 @@ function getScoreIcon(score) {
                 <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
             </svg>`;
     }
+}
+
+function verifyQuizAccess(QuizRank) {
+    userRankID = checkRankId(user.rank);
+    
+    if (userRankID >= QuizRank) {
+        return true
+    }
+    return false
 }
