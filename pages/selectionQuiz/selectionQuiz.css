@@ -21,7 +21,9 @@
 }
 
 #selection-quiz-section .button.open-quiz {
-    background-color: var(--btn-correct);
+    background-color: var(--btn-incompleted);
+    border-color: var(--btn-incompleted-shd);
+    box-shadow: 0.2rem 0.2rem 0 var(--btn-incompleted-shd);
 }
 
 #selection-quiz-section .button.locked-quiz {
