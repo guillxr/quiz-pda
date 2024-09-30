@@ -20,9 +20,9 @@ function showQuests() {
 
             button.textContent = `Quiz ${nameQuiz}`
             button.classList.add('button')
-            button.classList.add(`${verifyQuizAccess(i) ? 'correct' : 'incorrect'}`)
-            button.disabled = verifyQuizAccess(i) ? false : true;
-            button.innerHTML += verifyQuizAccess(i) ? '' : `${lockIcon}`;
+            button.classList.add(`${verifyQuizAccess(i + 1) ? 'open-quiz' : 'locked-quiz'}`)
+            button.disabled = verifyQuizAccess(i + 1) ? false : true;
+            button.innerHTML += verifyQuizAccess(i + 1) ? '' : `${lockIcon}`;
             button.setAttribute('level', i)
             button.setAttribute('quest', questNum)
             selectionQuizSection.appendChild(button)
@@ -33,6 +33,7 @@ function showQuests() {
                 const percentage = getPercentage(currentScore)
                 const scoreIcon = getScoreIcon(currentScore)
 
+                button.classList.remove('open-quiz')
                 button.classList.add('correct')
                 button.innerHTML += `<span>${percentage}% ${scoreIcon}</span>`
             }
