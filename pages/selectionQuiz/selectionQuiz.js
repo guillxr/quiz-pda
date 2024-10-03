@@ -1,3 +1,6 @@
+const selectionQuestSection = document.getElementById('selection-quest-section')
+
+// carrega todos as quests que existem no questions.js e exibe no html em botoes
 function showQuests() {
     getQuizDataAndUpdateLocal()
     const lockIcon = `<svg class="lock-icon" fill="#000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -16,7 +19,6 @@ function showQuests() {
             const button = document.createElement('button')
             let nameQuiz = checkNameQuiz(questNum)
             let currentScore = quest[questNum].score
-            let currentRankId = checkRankId(user.rank)
 
             button.textContent = `Quiz ${nameQuiz}`
             button.classList.add('button')
@@ -25,7 +27,7 @@ function showQuests() {
             button.innerHTML += verifyQuizAccess(i + 1) ? '' : `${lockIcon}`;
             button.setAttribute('level', i)
             button.setAttribute('quest', questNum)
-            selectionQuizSection.appendChild(button)
+            selectionQuestSection.appendChild(button)
             
             
 
@@ -48,21 +50,23 @@ function showQuests() {
     }
 }
 
+// inicia o quiz de acordo com o level e quest do botão clicado
 function startQuizButton(e) {
     let button = e.target.closest('button')
     
     currentLevelQuestions = parseInt(button.getAttribute('level'))
     currentQuizQuest = parseInt(button.getAttribute('quest'))
 
-    while(selectionQuizSection.firstChild) {
-        selectionQuizSection.removeChild(selectionQuizSection.firstChild)
+    while(selectionQuestSection.firstChild) {
+        selectionQuestSection.removeChild(selectionQuestSection.firstChild)
     }
 
-    hide(selectionQuiz)
+    hide(selectionQuest)
     show(quizSection)
     startQuiz()
 }
 
+// retorna o id do rank a partir do nome
 function checkRankId(rank) {
     switch(rank) {
         case 'bronze':
@@ -78,6 +82,7 @@ function checkRankId(rank) {
     }
 }
 
+// retorna o nome da quest/quiz a partir do id
 function checkNameQuiz(num) {
     switch(num) {
         case 0:
@@ -89,10 +94,12 @@ function checkNameQuiz(num) {
     }
 }
 
+// retorna a porcentagem de acertos da quest/quiz
 function getPercentage(value) {
     return (value / 50) * 100
 }
 
+// define o svg/icon de acordo com o score da quest/quiz
 function getScoreIcon(score) {
     if (score < 50) {
         return `
@@ -105,6 +112,7 @@ function getScoreIcon(score) {
     }
 }
 
+// verifica se o rank atual é igual ou maior do que o rank requerido da quest/quiz
 function verifyQuizAccess(QuizRank) {
     userRankID = checkRankId(user.rank);
     
