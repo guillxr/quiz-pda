@@ -35,7 +35,7 @@ function loadUserAvatar() {
     }
 }
 
-// insere o src da badge do e o nome do rank nos elementos html que possuem a sua classs
+// insere o nome do rank nos elementos html que possuem a sua classs
 function loadUserRank() {
     const userRankElements = document.getElementsByClassName('user-rank-content');
 
@@ -48,6 +48,7 @@ function loadUserRank() {
     loadUserBadge()
 }
 
+// insere o src da badge nos elementos html que possuem a sua classs
 function loadUserBadge() {
     const userRankBadge = document.getElementsByClassName('user-avatar-rank');
 
@@ -55,6 +56,7 @@ function loadUserBadge() {
         let rankBadge = userRankBadge[i]
 
         rankBadge.src = `images/ranksBadges/${user.rank}.svg`
+        rankBadge.alt = `Badge do rank ${user.rank}`
     }
 }
 
