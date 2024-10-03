@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz PDA</title>
+    <title>EducaTech - Quiz</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/rankColors.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="pages/registerPage/register.css">
     <link rel="stylesheet" href="pages/homePage/home.css">
     <link rel="stylesheet" href="pages/selectionQuiz/selectionQuiz.css">
@@ -26,31 +28,31 @@
                         <span>Avatar</span>
                         <ul class="avatars">
                             <li>
-                                <img src="images/avatars/avatar-0.svg" id="avatar-0" class="avatar-input">
+                                <img src="images/avatars/avatar-0.svg" alt="Imagem do avatar 1" id="avatar-0" class="avatar-input">
                             </li>
                             <li>
-                                <img src="images/avatars/avatar-1.svg" id="avatar-1" class="avatar-input">
+                                <img src="images/avatars/avatar-1.svg" alt="Imagem do avatar 2" id="avatar-1" class="avatar-input">
                             </li>
                             <li>
-                                <img src="images/avatars/avatar-2.svg" id="avatar-2" class="avatar-input">
+                                <img src="images/avatars/avatar-2.svg" alt="Imagem do avatar 3" id="avatar-2" class="avatar-input">
                             </li>
                             <li>
-                                <img src="images/avatars/avatar-3.svg" id="avatar-3" class="avatar-input">
+                                <img src="images/avatars/avatar-3.svg" alt="Imagem do avatar 4" id="avatar-3" class="avatar-input">
                             </li>
                             <li>
-                                <img src="images/avatars/avatar-4.svg" id="avatar-4" class="avatar-input">
+                                <img src="images/avatars/avatar-4.svg" alt="Imagem do avatar 5" id="avatar-4" class="avatar-input">
                             </li>
                             <li>
-                                <img src="images/avatars/avatar-5.svg" id="avatar-5" class="avatar-input">
+                                <img src="images/avatars/avatar-5.svg" alt="Imagem do avatar 6" id="avatar-5" class="avatar-input">
                             </li>
                             <li>
-                                <img src="images/avatars/avatar-6.svg" id="avatar-6" class="avatar-input">
+                                <img src="images/avatars/avatar-6.svg" alt="Imagem do avatar 7" id="avatar-6" class="avatar-input">
                             </li>
                             <li>
-                                <img src="images/avatars/avatar-7.svg" id="avatar-7" class="avatar-input">
+                                <img src="images/avatars/avatar-7.svg" alt="Imagem do avatar 8" id="avatar-7" class="avatar-input">
                             </li>
                             <li>
-                                <img src="images/avatars/avatar-8.svg" id="avatar-8" class="avatar-input">
+                                <img src="images/avatars/avatar-8.svg" alt="Imagem do avatar 9" id="avatar-8" class="avatar-input">
                             </li>
                         </ul>
                     </div>
@@ -61,10 +63,11 @@
         </div>
     </div>
 
-    <div id="home" class="hidden">       
+    <div id="home" class="hidden">
+        <div id="ytplayer"></div>
         <div id="home-section">
             <div class="user-avatar">
-                <img src="" alt="" class="user-avatar-content">
+                <img src="" alt="Imagem do avatar escolhido" class="user-avatar-content">
                 <img src="" alt="" class="user-avatar-rank">
             </div>
             <span class="user-rank-content"></span>
@@ -95,17 +98,60 @@
 
     <div id="quiz" class="hidden">
         <nav class="nav-quiz">
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-filter-left" viewBox="0 0 16 16">
-                <path d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
-              </svg>
+            <button id="open-sidebar" onclick="openSidebar()">
+                <svg width="45" height="45" viewBox="0 0 100 100">
+                  <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                  <path class="line line2" d="M 20,50 H 80" />
+                  <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
             </button>
             <div class="user-avatar">
-                <img src="" alt="" class="user-avatar-content">
+                <img src="" alt="Imagem do avatar escolhido" class="user-avatar-content">
                 <img src="" alt="" class="user-avatar-rank">
             </div>
         </nav>
-        <div id="selection-quiz">
-            <div id="selection-quiz-section">
+        <div id="sidebar-quiz" class="hidden" onclick="handleClickOutsideSidebar()">
+            <div id="sidebar-content">
+                <h2>Configurações</h2>
+                <div id="config-music">
+                    <div class="config-text">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.3333 19V7H21.9999V19" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="19.3333" cy="19" r="2.66667" stroke-width="2.66667"/>
+                            <circle cx="8.66675" cy="19" r="2.66667" stroke-width="2.66667"/>
+                        </svg>                            
+                        <span>Música:</span>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="music-switch" onclick="handleClickMusicSwitch()">
+                        <span class="slider"></span>
+                    </label>  
+                </div>
+                <div id="config-sound">
+                    <div class="config-text">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 12.5H6.25V17.5H10L16.25 22.5V7.5L10 12.5Z" stroke-width="2.5"/>
+                            <path d="M20 13.75V16.25" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+                            <path d="M23.75 10V20" stroke-width="2.5" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>                            
+                        <span>Som:</span>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" onclick="handleClickSoundSwitch()" id="sound-switch">
+                        <span class="slider"></span>
+                    </label>  
+                </div>
+                <button class="button" id="close-sidebar" onclick="openSidebar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z"/>
+                        <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                    </svg>                   
+                    Fechar
+                </button>
+            </div>
+        </div>
+        <div id="selection-quest">
+            <div id="selection-quest-section">
             </div>
         </div>
         <div id="quiz-section" class="hidden">
@@ -141,6 +187,8 @@
                 <div id="answer-buttons">
                 </div>
                 <div id="quiz-button"></div>
+                <audio id="audio-correct-answer" src="sounds/correct.mp3" preload="auto"></audio>
+                <audio id="audio-incorrect-answer" src="sounds/incorrect.mp3" preload="auto"></audio>
             </div>
             <div id="quiz-score">
                 <div id="quiz-score-info">
@@ -154,16 +202,20 @@
                     <h2 id="quiz-score-text"></h2>
                 </div>
                 <div id="quiz-score-button"></div>
+                <audio id="audio-finish-quiz" src="sounds/finish.mp3" preload="auto"></audio>
             </div>
         </div>
+        
     </div>
     <script src="js/script.js"></script>
-    <script src="pages/homePage/home.js"></script>
+    <script src="js/sidebar.js"></script>
     <script src="js/user.js"></script>
     <script src="js/ranking.js"></script>
     <script src="questions/questions.js"></script>
     <script src="questions/updateQuestions.js"></script>
+    <script src="pages/homePage/home.js"></script>
     <script src="pages/quizPage/quiz.js"></script>
+    <script src="js/youtubeAPI.js"></script>
     <script src="pages/selectionQuiz/selectionQuiz.js" defer></script>
     <script src="pages/registerPage/register.js" defer></script>
 </body>
