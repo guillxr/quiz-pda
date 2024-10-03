@@ -36,6 +36,7 @@ function checkDataStorage() {
     }
 }
 
+// função que carrega a page home e chama as funções dependentes
 function loadUserHome(message) {
     registerSection.remove()
     getRankAndUpdate()
