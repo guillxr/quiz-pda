@@ -49,15 +49,4 @@
 
 #home .button {
     margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
 }
-
-#home .button svg {
-    fill: var(--btn-text);
-}
-
-
-
-
