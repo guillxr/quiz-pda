@@ -6,6 +6,7 @@ const quizButton = document.getElementById('quiz-button')
 const quizScoreButton = document.getElementById('quiz-score-button')
 const quizScoreText = document.getElementById('quiz-score-text')
 const quizCard = document.getElementById('quiz-card')
+const quizScore = document.getElementById('quiz-score')
 const selectionQuizSection = document.getElementById('selection-quiz-section')
 const selectionQuiz = document.getElementById('selection-quiz')
 const currentQuestionElement = document.getElementById('current-question')
@@ -129,6 +130,8 @@ function showScore() {
     stopCountdown()
     resetElements()
 
+    quizScore.style.display = 'flex'
+
     quizScoreText.innerHTML = `Seu score foi de ${score} em ${quizData[currentLevelQuestions].questions[currentQuizQuest].quests.length} questões`
 
     createButton('quiz-finish-button', 'Continuar', quizScoreButton, handleQuestEndButton)
@@ -141,6 +144,8 @@ function showScore() {
 function hideScore() {
     const finishButton = document.getElementById('quiz-finish-button')
     const tryAgainButton = document.getElementById('quiz-try-again-button')
+
+    quizScore.style.display = 'none'
 
     if(finishButton) {
         quizScoreButton.removeChild(finishButton)
